@@ -20,6 +20,7 @@ public class CheckIsomorphicFunction {
         
         for(int i = 0; i < s.length(); i++){
         	// Default doesn't really matter if its -1 or -2
+        	// Both index will be -1 if its the first time we seen, this way the if statement won't trigger
             int indexS = mapS.getOrDefault(s.charAt(i), -1);
             int indexT = mapT.getOrDefault(t.charAt(i), -1);
             
@@ -35,6 +36,7 @@ public class CheckIsomorphicFunction {
             mapT.put(t.charAt(i),i);
         }
         
+        // Return true means it passes all the cases
         return true;
     }
     
