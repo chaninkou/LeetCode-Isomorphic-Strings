@@ -40,22 +40,25 @@ public class CheckIsomorphicFunction {
         return true;
     }
     
-//    public boolean isIsomorphic(String s, String t) {
-//		int[] map = new int[128];
-//		
-//		int[] book = new int[128];
-//		
-//		for (int i = 0; i < s.length(); i++) {
-//			int cs = (int) s.charAt(i);
-//			int ts = (int) t.charAt(i);
-//			
-//			if (map[cs] == 0 && book[ts] == 0) {
-//				map[cs] = ts;
-//				book[ts] = 1;
-//			} else if (map[cs] != ts)
-//				return false;
-//		}
-//		
-//		return true;
-//    }
+    public boolean isIsomorphic2(String s, String t) {
+		int[] map1 = new int[128];
+		
+		int[] map2 = new int[128];
+		
+		for (int i = 0; i < s.length(); i++) {
+			// Make them into index
+			int cs = (int) s.charAt(i);
+			int ts = (int) t.charAt(i);
+			
+			if (map1[cs] == 0 && map2[ts] == 0) {
+				map1[cs] = ts;
+				
+				// Doesn't matter if its 1 or something
+				map2[ts] = 1;
+			} else if (map1[cs] != ts)
+				return false;
+		}
+		
+		return true;
+    }
 }
