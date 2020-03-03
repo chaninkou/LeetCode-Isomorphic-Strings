@@ -9,6 +9,6 @@ public class Main {
 		
 		CheckIsomorphicFunction solution = new CheckIsomorphicFunction();
 		
-		System.out.println("Solution: " + solution.isIsomorphic(s, t));
+		System.out.println("Solution: " + solution.isIsomorphic2(s, t));
 	}
 }
