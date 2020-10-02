@@ -1,4 +1,4 @@
-package isomorphic;
+package leetcode205;
 
 import java.util.HashMap;
 import java.util.Map;
